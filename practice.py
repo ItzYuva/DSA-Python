@@ -26,6 +26,4 @@ numbers2 = [3,5,7]
 added_numbers = list(map(lambda x,y:x+y, numbers1, numbers2))
 print(added_numbers)
 
-
-
-
+print()
