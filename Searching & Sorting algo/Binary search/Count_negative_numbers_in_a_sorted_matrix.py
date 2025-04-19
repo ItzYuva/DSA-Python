@@ -1,7 +1,10 @@
 '''
 You are given an m x n matrix grid where each row and column is sorted in non-increasing order. Your task is to return the number of negative numbers present in the matrix.
 
-Input: grid = [[4, 3, 2, 1], [3, 2, 1, -1], [1, 1, -1, -2], [-1, -1, -2, -3]] 
+Input: grid = [[4, 3, 2, 1],
+               [3, 2, 1, -1],
+               [1, 1, -1, -2], 
+               [-1, -1, -2, -3]]
 Output: 7 
 Explanation: There are 7 negative numbers in the matrix.
 '''
