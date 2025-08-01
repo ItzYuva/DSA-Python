@@ -39,5 +39,5 @@ def checkSorted(l1):
     
     return checkSorted(l1[1:])
 
-l1 = [2,5,8,3,6]
+l1 = [2,5,8,3,6,4,10,18,12]
 print(checkSorted(l1))
