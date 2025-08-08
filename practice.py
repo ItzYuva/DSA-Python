@@ -41,3 +41,5 @@ def checkSorted(l1):
 
 l1 = [2,5,8,3,6,4,10,18,12]
 print(checkSorted(l1))
+
+
