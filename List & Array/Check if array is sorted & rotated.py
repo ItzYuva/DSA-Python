@@ -26,35 +26,35 @@ Explanation: [1,2,3] is the original sorted array.
 You can rotate the array by x = 0 positions (i.e. no rotation) to make nums.
 '''
 
-class Solution(object):
-    def check(self, nums):
-        """
-        :type nums: List[int]
-        :rtype: bool
-        """
+def check(nums):
+    """
+    :type nums: List[int]
+    :rtype: bool
+    """
+    
+    # Get the length of the array
+    n = len(nums)
+    
+    # count will keep track of how many times the order is broken
+    # (i.e., when nums[i] > nums[i+1])
+    count = 0
+    
+    # Loop through the array
+    # Note: we use range(n) instead of range(n-1) because we also want to check
+    # the last element against the first element (circular/rotation check).
+    for i in range(n):
         
-        # Get the length of the array
-        n = len(nums)
-        
-        # count will keep track of how many times the order is broken
-        # (i.e., when nums[i] > nums[i+1])
-        count = 0
-        
-        # Loop through the array
-        # Note: we use range(n) instead of range(n-1) because we also want to check
-        # the last element against the first element (circular/rotation check).
-        for i in range(n):
-            
-            # Compare current element with the next element
-            # (i+1) % n ensures we wrap around at the end.
-            # Example: if i = n-1 (last index), (i+1) % n = 0 (first index).
-            if nums[i] > nums[(i+1) % n]:
-                count += 1   # order breaks → increase the count
-        
-        # After checking all pairs:
-        # - If count == 0 → array is already sorted (not rotated) → True
-        # - If count == 1 → array is sorted & rotated → True
-        # - If count > 1 → array is neither sorted nor properly rotated → False
-        return count <= 1
+        # Compare current element with the next element
+        # (i+1) % n ensures we wrap around at the end.
+        # Example: if i = n-1 (last index), (i+1) % n = 0 (first index).
+        if nums[i] > nums[(i+1) % n]:
+            count += 1   # order breaks → increase the count
+    
+    # After checking all pairs:
+    # - If count == 0 → array is already sorted (not rotated) → True
+    # - If count == 1 → array is sorted & rotated → True
+    # - If count > 1 → array is neither sorted nor properly rotated → False
+    return count <= 1
 
 nums = [1,2,3]
+print(check(nums))
