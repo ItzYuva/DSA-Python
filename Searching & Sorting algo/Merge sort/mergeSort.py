@@ -1,3 +1,5 @@
+# For reference: https://www.youtube.com/watch?v=_trEkEX_-2Q&ab_channel=Amulya%27sAcademy
+
 def mergeSort(nums):
     """
     Merge Sort Algorithm
