@@ -19,3 +19,16 @@ Output: 23
 Explanation: The subarray [5,4,-1,7,8] has the largest sum 23.
 '''
 
+def maxSubArray(nums):
+    n = len(nums)
+    max_sum = float('-inf')
+    for i in range(n):
+        for j in range(i, n):
+            current_sum = 0
+            for k in range(i, j+1):
+                current_sum += nums[k]
+            max_sum = max(max_sum, current_sum)
+    return max_sum
+
+nums = [5,4,-1,7,8]
+print(maxSubArray(nums))
