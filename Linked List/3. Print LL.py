@@ -42,4 +42,3 @@ print_LL(head)
 ####
 # print(third.next.data) # AttributeError: 'NoneType' object has no attribute 'data'
 
-
