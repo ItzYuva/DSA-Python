@@ -18,3 +18,22 @@ Output: 0
 Explanation: In this case, no transactions are done and the max profit = 0.
 '''
 
+# Brute Force approach --
+
+def maxProfit(prices):
+    # Initialize max_profit to 0 (if no profit possible, result stays 0)
+    max_profit = 0
+
+    # Outer loop → choose a buying day i
+    for i in range(len(prices)):
+        # Inner loop → choose a selling day j (must be after i)
+        for j in range(i + 1, len(prices)):
+            # Calculate profit if we buy on day i and sell on day j
+            profit = prices[j] - prices[i]
+
+            # Update max_profit if this profit is greater
+            if profit > max_profit:
+                max_profit = profit
+
+    # After checking all pairs, return the best profit found
+    return max_profit
