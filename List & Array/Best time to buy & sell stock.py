@@ -19,7 +19,7 @@ Explanation: In this case, no transactions are done and the max profit = 0.
 '''
 
 # Brute Force approach --
-
+'''
 def maxProfit(prices):
     # Initialize max_profit to 0 (if no profit possible, result stays 0)
     max_profit = 0
@@ -37,3 +37,34 @@ def maxProfit(prices):
 
     # After checking all pairs, return the best profit found
     return max_profit
+'''
+
+# Optimal solution --
+
+def maxProfit(prices):
+
+    # If the list is empty, no transaction can be made → return 0
+    if not prices:
+        return 0
+
+    # Initialize variables
+    # min_price → keeps track of the lowest price seen so far (best buying price)
+    # max_profit → keeps track of the best profit achievable so far
+    min_price = float('inf')
+    max_profit = 0
+
+    # Loop through each day's stock price
+    for p in prices:
+        # Check if selling today (p) after buying at min_price gives better profit
+        if p - min_price > max_profit:
+            max_profit = p - min_price
+
+        # Update min_price if today's price is smaller (better to buy here)
+        if p < min_price:
+            min_price = p
+
+    # Return the maximum profit found after scanning all prices
+    return max_profit
+
+prices = [7,1,5,3,6,4]
+print(maxProfit(prices))
