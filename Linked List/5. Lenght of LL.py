@@ -1,4 +1,4 @@
-from common import Node,take_input_better,print_LL
+from Common import Node,take_input_better,print_LL
 
 def lenthOfLL(head):
     temp = head
