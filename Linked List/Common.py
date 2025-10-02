@@ -27,6 +27,6 @@ def take_input_better():
     
     return head
 
-newhead = take_input_better()
-print_LL(newhead)
-
+def createLLFromList(l1):
+    head = None
+    tail = None
