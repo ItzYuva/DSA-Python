@@ -21,7 +21,7 @@ def createDLLFromList(l1):
     return head, tail
 
 
-def insert_at_beginning(value):
+def insert_at_beginning(head, tail, value):
     newNode = Node(value)
     if head is None:
         head = tail = newNode
@@ -30,7 +30,9 @@ def insert_at_beginning(value):
         head.prev = newNode
         head = newNode
 
-def insert_at_end(value):
+    return head, tail
+
+def insert_at_end(head, tail, value):
     newNode = Node(value)
     if head is None:
         head = newNode
@@ -39,6 +41,8 @@ def insert_at_end(value):
         newNode.prev = tail
         tail.next = newNode
         tail = newNode
+
+    return head, tail
 
 def print_forward(head):
     temp = head
