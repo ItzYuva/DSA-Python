@@ -21,24 +21,24 @@ def createDLLFromList(l1):
     return head, tail
 
 
-def insert_at_beginning(self, value):
+def insert_at_beginning(value):
     newNode = Node(value)
-    if self.head is None:
-        self.head = self.tail = newNode
+    if head is None:
+        head = tail = newNode
     else:
-        newNode.next = self.head
-        self.head.prev = newNode
-        self.head = newNode
+        newNode.next = head
+        head.prev = newNode
+        head = newNode
 
-def insert_at_end(self,value):
+def insert_at_end(value):
     newNode = Node(value)
-    if self.head is None:
-        self.head = newNode
-        self.tail = newNode
+    if head is None:
+        head = newNode
+        tail = newNode
     else:
-        newNode.prev = self.tail
-        self.tail.next = newNode
-        self.tail = newNode
+        newNode.prev = tail
+        tail.next = newNode
+        tail = newNode
 
 def print_forward(head):
     temp = head
