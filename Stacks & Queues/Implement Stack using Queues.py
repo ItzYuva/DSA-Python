@@ -163,3 +163,6 @@ class MyStack(object):
         Returns True if the stack is empty, otherwise False.
         """
         return len(self.q1) == 0
+
+
+# For reference: https://www.youtube.com/watch?v=LaBE0gNYCaM
