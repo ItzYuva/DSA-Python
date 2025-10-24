@@ -45,3 +45,22 @@ def trap(height):
     return trapped_water
 
 # We can solve this problem using two pointer approach as well: {O(n) time, O(1) space}
+def trap(height):
+    left, right = 0, len(height)-1
+    leftMax = 0
+    rightMax = 0
+    trapped_water = 0
+    while left <= right:
+        if height[left] <= height[right]:
+            if height[left] >= leftMax:
+                leftMax = height[left]
+            else:
+                trapped_water += leftMax - height[left]
+            left += 1
+        else:
+            if height[right] >= rightMax:
+                rightMax = height[right]
+            else:
+                trapped_water += rightMax - height[right]
+            right -= 1
+    return trapped_water
