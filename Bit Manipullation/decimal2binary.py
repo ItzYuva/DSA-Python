@@ -3,7 +3,7 @@
 def decimal2binary(num:int)->str:
     result = ""
     while num>0:
-        if num % 2 ==0:
+        if num % 2==0:
             result += "1"
         else:
             result += "0"
