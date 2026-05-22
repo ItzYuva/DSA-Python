@@ -22,3 +22,4 @@ It can be shown we cannot convert 3 to 4 in less than 3 steps. Hence, we return 
 '''
 
 def minBitFlips(start: int, goal: int) -> int:
+    count = 0
