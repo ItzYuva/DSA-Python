@@ -22,4 +22,14 @@ It can be shown we cannot convert 3 to 4 in less than 3 steps. Hence, we return 
 '''
 
 def minBitFlips(start: int, goal: int) -> int:
+    ans = start ^ goal
     count = 0
+    for i in range(0, 32): # we are assuming that the input numbers are 32-bit integers, so we check each bit from 0 to 31
+        if ans & (1<<i) != 0: # if the ith bit is set in ans, then we need to flip that bit
+            count += 1
+    return count
+
+print(minBitFlips(10, 7))
+
+#  time complexity will be O(1) because we are performing a constant number of operations regardless of the input size.
+#  space complexity will be O(1) because we are using a constant amount of space
