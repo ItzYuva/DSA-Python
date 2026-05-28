@@ -1,8 +1,8 @@
 def printNum(num):
-    print(num)
-    if(num ==1):
+    if(num == 0):
         return
     printNum(num-1)
+    print(num)
 
 
 
