@@ -16,12 +16,12 @@ def print_binary_tree(root):
         return
 
     # Format : Node : L->LeftChildData , R->RightChild Data
-    print(root.data, end=": ")
+    print(root.data, end=": ") 
 
     if(root.left is not None):
         print(f"L->{root.left.data}",end = ", ")
     else:
-        print("L->None",end=",")
+        print("L->None",end=",") 
 
     if(root.right is not None):
         print(f"R->{root.right.data}")
